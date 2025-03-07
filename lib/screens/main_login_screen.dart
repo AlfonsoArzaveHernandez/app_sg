@@ -1,9 +1,8 @@
-import 'package:app_sg/screens/resi_registrar_visita.dart';
+import 'package:app_sg/screens/residentes/resi_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class MainLoginScreen extends StatelessWidget {
-
   const MainLoginScreen({super.key});
 
   @override
@@ -23,7 +22,7 @@ class _ContenidoLoginState extends State<ContenidoLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.shade400, // Color del fondo
+      backgroundColor: Colors.red.shade400, // Color del fondo, si es visible algo se hizo mal en la interfaz
       body: const Stack( children: [ 
         Fondo(),
         FormularioLogin()      
@@ -32,6 +31,7 @@ class _ContenidoLoginState extends State<ContenidoLogin> {
     );
   }
 }
+
 
 class Fondo extends StatelessWidget {
   const Fondo({super.key});
@@ -58,7 +58,6 @@ class Fondo extends StatelessWidget {
     );
   }
 }
-
 
 class FormularioLogin extends StatelessWidget {
   const FormularioLogin({super.key});
@@ -121,7 +120,7 @@ class FormularioLogin extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 150,vertical: 20)),
                   onPressed: (){Navigator.push(
                     context,
-                     MaterialPageRoute(builder: (context) => const RegistroVisita()),
+                     MaterialPageRoute(builder: (context) => const ResiScreen()),
                 );
                 }, 
                      child: const Text('Log in')),
