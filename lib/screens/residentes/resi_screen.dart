@@ -48,8 +48,8 @@ class _ResiScreenState extends State<ResiScreen> {
               inactiveIcons: const [
                 Text("Feed"),
                 Text("Historial"),
-                Text("Nueva"),
-                Text("Notifs"),
+                Text("Invitar"),
+                Text("Avisos"),
               ],
               color: Colors.transparent, 
               circleColor: Colors.transparent,

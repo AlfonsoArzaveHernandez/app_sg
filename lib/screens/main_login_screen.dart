@@ -1,3 +1,4 @@
+import 'package:app_sg/screens/register_screen.dart';
 import 'package:app_sg/screens/residentes/resi_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -63,8 +64,7 @@ class FormularioLogin extends StatelessWidget {
   const FormularioLogin({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    
+  Widget build(BuildContext context) { 
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
@@ -109,11 +109,15 @@ class FormularioLogin extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20,),
-               ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 20)
-                ),
-                onPressed: null, child: const Text('Sign in')),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 20)
+                  ),
+                  onPressed: (){
+                    Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => const RegisterScreen() )
+                    );
+                  }, child: const Text('Sign in')),
                 const SizedBox(height: 20),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
