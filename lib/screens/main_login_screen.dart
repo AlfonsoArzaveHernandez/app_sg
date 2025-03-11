@@ -77,14 +77,15 @@ class FormularioLogin extends StatelessWidget {
             )
             ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const SizedBox(height: 20,),
+              
               const Text('Iniciar Sesion', 
                 style: TextStyle(
                   fontSize: 20, 
                   color: Colors.black,
                   fontWeight: FontWeight.bold),),
-              const SizedBox(height: 20),  
+                
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
@@ -108,7 +109,7 @@ class FormularioLogin extends StatelessWidget {
                   ),                   
                 ),
               ),
-              const SizedBox(height: 20,),
+              
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 20)
@@ -118,7 +119,7 @@ class FormularioLogin extends StatelessWidget {
                       context, MaterialPageRoute(builder: (context) => const RegisterScreen() )
                     );
                   }, child: const Text('Sign in')),
-                const SizedBox(height: 20),
+                
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 150,vertical: 20)),
@@ -128,7 +129,7 @@ class FormularioLogin extends StatelessWidget {
                 );
                 }, 
                      child: const Text('Log in')),
-                     const SizedBox(height: 20,)
+                     
             ],
           ),
       ),

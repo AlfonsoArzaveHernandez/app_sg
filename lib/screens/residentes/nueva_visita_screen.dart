@@ -7,7 +7,7 @@ class NuevaVisitaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.pink.shade400,
-      body: ContenidoNuevaVisita()
+      body: const ContenidoNuevaVisita()
     );
   }
 }
@@ -23,7 +23,8 @@ class _ContenidoNuevaVisitaState extends State<ContenidoNuevaVisita> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
+      color: Colors.amber.shade400,
+      child: const  Center(
         child: Stack(children: [
           FondoNuevaVisita(),
           FormularioNuevaVisita()

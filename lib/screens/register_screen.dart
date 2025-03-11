@@ -48,14 +48,18 @@ class FormularioRegistroUsuario extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Center(
+    return Align(
+      alignment: Alignment.center,
+      child: Container(
+        height: 700,
+        width: 350,
+        color: Colors.pink.shade50,        
         child: Column(
           children: [
             const SizedBox(height: 20),
             TextFormField(
               decoration: const InputDecoration(
+                border: OutlineInputBorder(),
                 hintText: 'Nombre'
               ),
             ),
@@ -63,23 +67,38 @@ class FormularioRegistroUsuario extends StatelessWidget {
             
             TextFormField(
               decoration: const InputDecoration(
+                border: OutlineInputBorder(),
                 hintText: 'Telefono'),
             ),
-
-            const SizedBox(height: 20),
-            TextFormField(
-              
-              decoration: const InputDecoration(
                 
-                hintText: 'Calle'
-              ),        
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                // Campo para Calle (ocupa todo el espacio disponible)
+                Expanded(
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      labelText: 'Calle',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8), // Espacio entre campos
+
+                // Campo para Número (tamaño pequeño y hint text)
+                SizedBox(
+                  width: 70, // Ancho reducido
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      hintText: '###', // Hint text pequeño
+                      border: OutlineInputBorder(),
+                    ),
+                    keyboardType: TextInputType.number,
+                  ),
+                ),
+              ],
             ),
-            TextFormField(
-              decoration: const InputDecoration(
-                hintText: '###'
-              ),
-            ),
-            ElevatedButton(onPressed: null, child: const Text('Enviar registro'))
+            const ElevatedButton(onPressed: null, child: Text('Enviar registro'))
           ],
         ),
       ),
