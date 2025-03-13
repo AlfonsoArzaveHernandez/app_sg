@@ -19,6 +19,16 @@ class _ResiScreenState extends State<ResiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Hola Usuario'),
+        centerTitle: true,
+        backgroundColor: Colors.green,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(25),
+              bottomLeft: Radius.circular(25))
+          ),),
+      backgroundColor: Colors.amber.shade400,
       body: Stack(
         children: [
           PageView(

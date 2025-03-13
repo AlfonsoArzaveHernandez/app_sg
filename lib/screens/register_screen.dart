@@ -19,7 +19,7 @@ class ContenidoRegisterScreen extends StatefulWidget {
 class _ContenidoRegisterScreenState extends State<ContenidoRegisterScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return const Scaffold( 
       body: Stack(
         children: [
           FondoRegistrarUsuario(),
@@ -36,7 +36,7 @@ class FondoRegistrarUsuario extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey.shade400,
+      color: Colors.blue.shade200,
       height: double.infinity,
       width: double.infinity,
     );
@@ -50,8 +50,10 @@ class FormularioRegistroUsuario extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.center,
+      
       child: Container(
-        height: 700,
+        
+        height: 650,
         width: 350,
         color: Colors.pink.shade50,        
         child: Column(
@@ -73,9 +75,10 @@ class FormularioRegistroUsuario extends StatelessWidget {
                 
             const SizedBox(height: 20),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // Campo para Calle (ocupa todo el espacio disponible)
-                Expanded(
+                SizedBox(
+                  width: 200,
                   child: TextFormField(
                     decoration: const InputDecoration(
                       labelText: 'Calle',
@@ -83,14 +86,13 @@ class FormularioRegistroUsuario extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(width: 8), // Espacio entre campos
-
-                // Campo para Número (tamaño pequeño y hint text)
+                //const SizedBox(width: 8), 
+                
                 SizedBox(
-                  width: 70, // Ancho reducido
+                  width: 70, 
                   child: TextFormField(
                     decoration: const InputDecoration(
-                      hintText: '###', // Hint text pequeño
+                      hintText: '###', 
                       border: OutlineInputBorder(),
                     ),
                     keyboardType: TextInputType.number,
@@ -101,7 +103,7 @@ class FormularioRegistroUsuario extends StatelessWidget {
             const ElevatedButton(onPressed: null, child: Text('Enviar registro'))
           ],
         ),
-      ),
+      )
     );
   }
 }
