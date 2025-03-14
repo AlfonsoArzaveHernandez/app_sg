@@ -19,8 +19,17 @@ class ContenidoRegisterScreen extends StatefulWidget {
 class _ContenidoRegisterScreenState extends State<ContenidoRegisterScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold( 
-      body: Stack(
+    return Scaffold( 
+      appBar: AppBar(
+        title: const Text('Hola Usuario'),
+        centerTitle: true,
+        backgroundColor: Colors.green,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(25),
+              bottomLeft: Radius.circular(25))
+          ),),
+      body: const Stack(
         children: [
           FondoRegistrarUsuario(),
           FormularioRegistroUsuario()
@@ -36,7 +45,7 @@ class FondoRegistrarUsuario extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue.shade200,
+      
       height: double.infinity,
       width: double.infinity,
     );
@@ -50,9 +59,7 @@ class FormularioRegistroUsuario extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.center,
-      
       child: Container(
-        
         height: 650,
         width: 350,
         color: Colors.pink.shade50,        
@@ -86,8 +93,7 @@ class FormularioRegistroUsuario extends StatelessWidget {
                     ),
                   ),
                 ),
-                //const SizedBox(width: 8), 
-                
+                //const SizedBox(width: 8),
                 SizedBox(
                   width: 70, 
                   child: TextFormField(
