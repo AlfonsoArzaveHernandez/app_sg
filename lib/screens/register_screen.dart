@@ -57,57 +57,62 @@ class FormularioRegistroUsuario extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Align(
       alignment: Alignment.center,
       child: Container(
         height: 650,
         width: 350,
         color: Colors.pink.shade50,        
-        child: Column(
-          children: [
-            const SizedBox(height: 20),
-            TextFormField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Nombre'
-              ),
-            ),
-            const SizedBox(height: 20),
+        child: Padding(
+          padding: EdgeInsets.all(30.0),
+          child: Column(
             
-            TextFormField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Telefono'),
-            ),
-                
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                SizedBox(
-                  width: 200,
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: 'Calle',
-                      border: OutlineInputBorder(),
+            children: [
+              const SizedBox(height: 20),
+              TextFormField(
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Nombre'
+                ),
+              ),
+              const SizedBox(height: 20),
+              
+              TextFormField(
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Telefono'),
+              ),
+                  
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SizedBox(
+                    
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        labelText: 'Calle',
+                        border: OutlineInputBorder(),
+                      ),
                     ),
                   ),
-                ),
-                //const SizedBox(width: 8),
-                SizedBox(
-                  width: 70, 
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      hintText: '###', 
-                      border: OutlineInputBorder(),
+                  //const SizedBox(width: 8),
+                  SizedBox(
+                    width: 70, 
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        hintText: '###', 
+                        border: OutlineInputBorder(),
+                      ),
+                      keyboardType: TextInputType.number,
                     ),
-                    keyboardType: TextInputType.number,
                   ),
-                ),
-              ],
-            ),
-            const ElevatedButton(onPressed: null, child: Text('Enviar registro'))
-          ],
+                ],
+              ),
+              const ElevatedButton(onPressed: null, child: Text('Enviar registro'))
+            ],
+          ),
         ),
       )
     );
