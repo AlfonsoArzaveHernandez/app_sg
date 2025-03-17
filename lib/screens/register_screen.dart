@@ -89,7 +89,7 @@ class FormularioRegistroUsuario extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   SizedBox(
-                    
+                    width: 200,
                     child: TextFormField(
                       decoration: const InputDecoration(
                         labelText: 'Calle',
