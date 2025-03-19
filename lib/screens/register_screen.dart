@@ -21,7 +21,7 @@ class _ContenidoRegisterScreenState extends State<ContenidoRegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar(
-        title: const Text('Hola Usuario'),
+        title: const Text('Registro de usuario'),
         centerTitle: true,
         backgroundColor: Colors.green,
         shape: const RoundedRectangleBorder(
@@ -63,7 +63,11 @@ class FormularioRegistroUsuario extends StatelessWidget {
       child: Container(
         height: 650,
         width: 350,
-        color: Colors.pink.shade50,        
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          color: Colors.pink.shade50,   
+        ),
+             
         child: Padding(
           padding: EdgeInsets.all(30.0),
           child: Column(
@@ -88,16 +92,18 @@ class FormularioRegistroUsuario extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SizedBox(
-                    width: 200,
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        labelText: 'Calle',
-                        border: OutlineInputBorder(),
+                  Expanded(
+                    child: SizedBox(
+                      width: 200,
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          labelText: 'Calle',
+                          border: OutlineInputBorder(),
+                        ),
                       ),
                     ),
                   ),
-                  //const SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   SizedBox(
                     width: 70, 
                     child: TextFormField(
@@ -110,7 +116,9 @@ class FormularioRegistroUsuario extends StatelessWidget {
                   ),
                 ],
               ),
-              const ElevatedButton(onPressed: null, child: Text('Enviar registro'))
+              const SizedBox(height: 20),
+              const ElevatedButton(onPressed: null, child: Text('Enviar registro'),
+              )
             ],
           ),
         ),

@@ -38,7 +38,8 @@ class _ContenidoLoginState extends State<ContenidoLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.shade400, // Color del fondo, si es visible algo se hizo mal en la interfaz
+   // Color del fondo, si es visible algo se hizo mal en la interfaz
+      backgroundColor: Colors.red.shade400,
       body: const Stack( children: [ 
         Fondo(),
         FormularioLogin()      
