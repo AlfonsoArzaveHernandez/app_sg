@@ -63,6 +63,8 @@ class Fondo extends StatelessWidget {
 
 class FormularioLogin extends StatelessWidget {
   const FormularioLogin({super.key});
+  
+
 
   @override
   Widget build(BuildContext context) { 
@@ -113,7 +115,8 @@ class FormularioLogin extends StatelessWidget {
                               ),
                     border: OutlineInputBorder(),
                     contentPadding: EdgeInsets.all(20.0),  
-                    hintStyle: TextStyle(color: Colors.black) 
+                    hintStyle: TextStyle(color: Colors.black),
+                    
                   ),                   
                 ),
               ),
