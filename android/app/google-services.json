@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1078053511044",
+    "project_id": "app-sg-db",
+    "storage_bucket": "app-sg-db.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078053511044:android:defec9ccc800e43d0ac7d1",
+        "android_client_info": {
+          "package_name": "com.example.app_sg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ4SaH-7HQejO5ZbrQWr3Q3jhmRANBvgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
